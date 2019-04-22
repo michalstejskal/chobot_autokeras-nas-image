@@ -1,8 +1,6 @@
 import math
-import time
 
 from autokeras import ImageClassifier
-from keras.datasets import cifar10
 from keras_preprocessing.image import ImageDataGenerator
 
 
