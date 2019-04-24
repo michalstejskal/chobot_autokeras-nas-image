@@ -18,8 +18,8 @@ def check_api_key(request_input):
             decoded_token = jwt.decode(auth_token, base64.b64decode(network.api_key_secret), algorithms=['HS256'],
                                        options={'verify_aud': False, 'require_sub': True})
             assert decoded_token['name'] == network.name
-            assert decoded_token['sub'] == network.user.login + '-' + network.name
-            assert decoded_token['scope'] == 'run'
+            # assert decoded_token['sub'] == network.user.login + '-' + network.name
+            # assert decoded_token['scope'] == 'run'
 
             return True
         except:
